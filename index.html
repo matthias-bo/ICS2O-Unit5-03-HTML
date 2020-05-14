@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5-03 webpage</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Matthias's cool webpage">
+    <meta name="keywords" content="positive or negative number">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    <h1>What movies can you watch?</h1>
+    <p>This webpage will help you determine what rated movie you're allowed to watch depending on uour age.</p>
+    <br>
+    <p><i>Please put your age here</i></p>
+    <input type="text" id="agetyped">
+    <br>
+    <br>
+    <button id="determine">Submit</button>
+    <script>
+    document.getElementById("determine").addEventListener("click", myfunction);
+    function myfunction() {
+    let age;
+    age = document.getElementById("agetyped").value;
+
+    if (age >= 17) {
+        alert ("You can watch an R rated movie alone!");
+}
+    else if (age >= 13) {
+        alert ("You can watch a PG 13 rated movie alone!");
+}
+
+    else if (age >= 5) {
+        alert ("You can watch a G rated movie!");
+}
+    else {
+        alert ("You're too young for anything really. Wait a couple more years :)");
+}
+}
+    </script>
+    </body>
+</html>
